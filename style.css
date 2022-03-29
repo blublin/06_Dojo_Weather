@@ -154,15 +154,11 @@ ___  ___  ___  _____ _   _
     font-weight: bold;
 }
 
-.temp-high, .temp-low {
-    display: flex;
-}
-
-.temp-high p{
-    /* margin-right: 30px; */
+.temp-high {
+    margin-right: 30px;
     color: red;
 }
-.temp-low p{
+.temp-low {
     color: blue;
 }
 
