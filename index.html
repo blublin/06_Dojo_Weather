@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+
+        <div id="nav-background">
+            <!-- Top Nav Bar -->
+            <div id="nav-bar">
+                <h1 id="title">
+                    DojoWeather
+                </h1>
+                <ul id="cities">
+                    <li><a href="#" id="burbank">Burbank</a></li>
+                    <li><a href="#" id="chicago">Chicago</a></li>
+                    <li><a href="#" id="dallas">Dallas</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- MAIN -->
+
+        <div id="main-content">
+
+            <!-- Current City, Temperature scale selection -->
+            <div id="city-temp">
+                <h2 id="curr-city">San Jose</h2>
+
+                <div id="temp-text">
+                    <p>show temperature in </p>
+                    <form action="#">
+                        <select name="temp-scale" id="temp-scale" onchange="tempChange(this)">
+                            <option value="cel">°C</option>
+                            <option value="fah">°F</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <hr id="solid-line">
+
+            <!-- Weather Forecast -->
+            <div id="weather">
+
+                <!-- Today -->
+                <div class="weather-card">
+                    <h3>Today</h3>
+                    <img src="imgs/some_rain.png" alt="rain clouds">
+                    <p>some rain</p>
+                    <div class="temp-high-low">
+                        <p class="temp-high cel">24°</p>
+                        <p class="temp-low cel">18°</p>
+                    </div>
+                </div>
+                
+                <!-- Tomorrow -->
+                <div class="weather-card">
+                    <h4>Tomorrow</h4>
+                    <img src="imgs/some_sun.png" alt="some sun">
+                    <p>some sun</p>
+                    <div class="temp-high-low">
+                        <p class="temp-high cel">27°</p>
+                        <p class="temp-low cel">19°</p>
+                    </div>
+                </div>
+                
+                <!-- Today + 2 // Use Date-->
+                <div class="weather-card">
+                    <h4 id="date-plus-two">placeholder</h4>
+                    <img src="imgs/some_clouds.png" alt="some clouds">
+                    <p>some clouds</p>
+                    <div class="temp-high-low">
+                        <p class="temp-high cel">21°</p>
+                        <p class="temp-low cel">16°</p>
+                    </div>
+                </div>
+                
+                <!-- Today + 3 // Use Date--> 
+                <div class="weather-card">
+                    <h4 id="date-plus-3">placeholder</h4>
+                    <img src="imgs/some_sun.png" alt="some sun">
+                    <p>some sun</p>
+                    <div class="temp-high-low">
+                        <p class="temp-high cel">26°</p>
+                        <p class="temp-low cel">21°</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Cookies, om nom nom nom -->
+        <div id="cookies">
+            <img src="imgs/cookie.png" alt="cookie with a bite out of it... makes me hungry">
+            <div id="cookies-info">
+                <h4>Stop! Cookie time</h4>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads,
+                    to provide social media features and to analyse our traffice. <a href="#">Read more...</a></p>
+            </div>
+            <button id="accept-cookies">I Accept</button>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
