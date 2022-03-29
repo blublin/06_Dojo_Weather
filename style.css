@@ -150,11 +150,13 @@ ___  ___  ___  _____ _   _
     font-weight: bold;
 }
 
-.temp-high {
-    margin-right: 30px;
+.red {
     color: red;
 }
 .temp-low {
+    margin-left: 30px;
+}
+.blue {
     color: blue;
 }
 

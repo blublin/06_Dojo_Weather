@@ -44,20 +44,26 @@ function youDoneSomething() {
     alert("Loading weather report...");
 }
 
-function convertTemps(element) {
+function tempChange(element) {
     let cel = "cel", fah = "fah";
     let previous = cel;
     // Skip check if same value applied, no need to convert
-    if (element.value == previous) {
-        return;
+
+    // all span classes should match, so finding first is enough
+    let spanClasses = document.querySelector("#today span").classList
+
+    if (spanClasses.contains(cel)) {
+        for (let elem of document.querySelectorAll(".temp-high-low span")) {
+            elem.innerText = (( parseInt(elem.innerText) * 1.8 ) + 32).toFixed(1);
+            elem.classList.remove(cel);
+            elem.classList.add(fah);
+        }
     }
-
-    // all temp classes should match, so finding first is enough
-    let currScale = document.querySelector("#today span");
-
-    for (let elem of document.querySelectorAll(".temp-high-low > p")) {
-        if (currScale.classList.contains(cel)) {
-            break;
+    else if (spanClasses.contains(fah)) {
+        for (let elem of document.querySelectorAll(".temp-high-low span")) {
+            elem.innerText = (( parseInt(elem.innerText) -32 ) / 1.8).toFixed(1);
+            elem.classList.remove(fah);
+            elem.classList.add(cel);
         }
     }
 }
