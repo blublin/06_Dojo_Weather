@@ -17,9 +17,9 @@
                     DojoWeather
                 </h1>
                 <ul id="cities">
-                    <li><a href="#" id="burbank">Burbank</a></li>
-                    <li><a href="#" id="chicago">Chicago</a></li>
-                    <li><a href="#" id="dallas">Dallas</a></li>
+                    <li><a href="#" id="burbank" onclick="youDoneSomething()">Burbank</a></li>
+                    <li><a href="#" id="chicago" onclick="youDoneSomething()">Chicago</a></li>
+                    <li><a href="#" id="dallas" onclick="youDoneSomething()">Dallas</a></li>
                 </ul>
             </div>
         </div>
@@ -49,50 +49,75 @@
             <div id="weather">
 
                 <!-- Today -->
-                <div class="weather-card">
+                <div id="today" class="weather-card">
                     <h3>Today</h3>
                     <img src="imgs/some_rain.png" alt="rain clouds">
                     <p>some rain</p>
                     <div class="temp-high-low">
-                        <p class="temp-high cel">24°</p>
-                        <p class="temp-low cel">18°</p>
+                        <p class="temp-high">
+                            <span class="toggle-temp cel">24</span>°
+                        </p>
+                        <p class="temp-low">
+                            <span class="toggle-temp cel">18</span>°
+                        </p>
                     </div>
                 </div>
                 
                 <!-- Tomorrow -->
-                <div class="weather-card">
+                <div id="tomorrow" class="weather-card">
                     <h4>Tomorrow</h4>
                     <img src="imgs/some_sun.png" alt="some sun">
                     <p>some sun</p>
                     <div class="temp-high-low">
-                        <p class="temp-high cel">27°</p>
-                        <p class="temp-low cel">19°</p>
+                        <div class="temp-high">
+                            <p class="toggle-temp cel">27</p>
+                            <p>°</p>
+                        </div>
+                        <div class="temp-low">
+                            <p class="toggle-temp cel">19</p>
+                            <p>°</p>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Today + 2 // Use Date-->
-                <div class="weather-card">
-                    <h4 id="date-plus-two">placeholder</h4>
+                <div id="date-plus-two" class="weather-card">
+                    <h4 >placeholder</h4>
                     <img src="imgs/some_clouds.png" alt="some clouds">
                     <p>some clouds</p>
                     <div class="temp-high-low">
-                        <p class="temp-high cel">21°</p>
-                        <p class="temp-low cel">16°</p>
+                        <div class="temp-high">
+                            <p class="toggle-temp cel">21°</p>
+                            <p>°</p>
+                        </div>
+                        <div class="temp-low">
+                            <p class="toggle-temp cel">16</p>
+                            <p>°</p>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Today + 3 // Use Date--> 
-                <div class="weather-card">
-                    <h4 id="date-plus-3">placeholder</h4>
+                <div id="date-plus-three" class="weather-card">
+                    <h4 >placeholder</h4>
                     <img src="imgs/some_sun.png" alt="some sun">
                     <p>some sun</p>
                     <div class="temp-high-low">
-                        <p class="temp-high cel">26°</p>
-                        <p class="temp-low cel">21°</p>
+                        <div class="temp-high">
+                            <p class="toggle-temp cel">26</p>
+                            <p>°</p>
+                        </div>
+                        <div class="temp-low">
+                            <p class="toggle-temp cel">21</p>
+                            <p>°</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            <!-- End Weather -->
+            </div>
+            
+        <!-- End Main -->
         </div>
 
         <!-- Cookies, om nom nom nom -->
@@ -103,7 +128,7 @@
                 <p>We use cookies (sadly not the edible ones) to personalize content and ads,
                     to provide social media features and to analyse our traffice. <a href="#">Read more...</a></p>
             </div>
-            <button id="accept-cookies">I Accept</button>
+            <button id="accept-cookies" onclick="closeCookies()">I Accept</button>
         </div>
 
     </div>
